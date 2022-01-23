@@ -15,20 +15,37 @@
 
 body {
   background-color: azure;
+  height: 100vh;
 }
 
 .div {
   font-size: large;
 }
 
-.nav {
-  display: block;
-  overflow: hidden;
-  list-style-type: none;
+/** using flexbox way
+*/
+.centerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
 }
 
-.nav li {
-  padding-left: 55px;
+/* using taditional way
+ .centerdiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000000;
+} */
+
+.nav {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  list-style-type: none;
 }
 
 @media only screen and (max-width: 390px) {
@@ -55,11 +72,4 @@ body {
 .nav img {
   max-width: 40px;
   max-height: auto;
-}
-
-.centerdiv {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
