@@ -22,12 +22,20 @@ body {
 }
 
 .nav {
+  display: block;
   overflow: hidden;
   list-style-type: none;
 }
 
 .nav li {
-  float: left;
+  padding-left: 55px;
+}
+
+@media only screen and (max-width: 390px) {
+  .nav li {
+    position: relative;
+    margin-left: 9vw;
+  }
 }
 
 .nav a {
